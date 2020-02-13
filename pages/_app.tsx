@@ -1,8 +1,7 @@
 import App, { Container } from 'next/app';
 import React from 'react';
 import GlobalStyles from '../styles/global-styles';
-import { ThemeProvider } from '../styles/themed-components';
-import theme from '../styles/theme';
+import Layout from './__layout';
 
 class ReactApp extends App<any> {
   public render() {
@@ -10,9 +9,9 @@ class ReactApp extends App<any> {
     return (
       <Container>
         <GlobalStyles/>
-        <ThemeProvider theme={theme}>
-          <Component {...pageProps}/>
-        </ThemeProvider>
+          <Layout>
+            <Component {...pageProps}/>
+          </Layout>
       </Container>
     );
   }

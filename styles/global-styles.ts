@@ -27,12 +27,6 @@ const GlobalStyle = createGlobalStyle`
       font-size: 12px;
     }
   }
-
-  @media only screen and (max-width: 576px) {
-    body {
-      font-size: 10px;
-    }
-  }
 `;
 
 export default GlobalStyle;

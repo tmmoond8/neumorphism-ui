@@ -1,4 +1,4 @@
-import styled from '../styles/themed-components';
+import styled from 'styled-components';
 
 interface IProps {}
 
