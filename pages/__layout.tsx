@@ -6,7 +6,6 @@ interface IProps {
 }
 
 const StyledLayout = styled.div`
-  background-color: red;
   height: 100vh;
 
   ${MQ(css`
@@ -16,6 +15,9 @@ const StyledLayout = styled.div`
     width: 375px;
     height: 812px;
     transform: translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #d5d5d9, 
+          -20px -20px 60px #ffffff;
   `)}
 `;
 
