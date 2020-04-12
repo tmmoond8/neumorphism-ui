@@ -1,26 +1,26 @@
 /** @jsx jsx */
-import { useEffect } from 'react'
-import { jsx, css } from '@emotion/core'
-import styled from '@emotion/styled'
-import { mobile } from '../../styles/MediaQuery'
+import { useEffect, ReactNode } from 'react';
+import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
+import { mobile } from '../../styles/MediaQuery';
 
 interface Props {
-  children: any;
+  children: ReactNode;
 }
 
-export default function (props: Props) {
+export default function Layout(props: Props): JSX.Element {
   useEffect(() => {
-    const App = document.querySelector('.App') as HTMLDivElement
+    const App = document.querySelector('.App') as HTMLDivElement;
     if (App !== null) {
-      App.style.height = '100vh'
+      App.style.height = '100vh';
     }
-  }, [])
+  }, []);
 
-  const { children } = props
-  return <Layout>{children}</Layout>
+  const { children } = props;
+  return <StyledLayout>{children}</StyledLayout>;
 }
 
-const Layout = styled.div`
+const StyledLayout = styled.div`
   position: relative;
   height: 667px;
   width: 375px;
@@ -37,4 +37,4 @@ const Layout = styled.div`
     box-shadow: none;
     border-radius: none;
   `)}
-`
+`;

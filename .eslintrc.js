@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard',
+    'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
   ],
   globals: {
     Atomics: 'readonly',
@@ -24,6 +24,12 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-    "quotes": [2, "single", "avoid-escape"]
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "vars": "all",
+      "args": "after-used",
+      "ignoreRestSiblings": false
+    }]
   }
 }

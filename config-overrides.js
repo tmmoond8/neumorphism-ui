@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const {
   override,
   disableEsLint,
   overrideDevServer,
   watchAll,
-} = require("customize-cra");
+} = require('customize-cra');
 
 module.exports = {
   webpack: override(
@@ -12,6 +13,6 @@ module.exports = {
   ),
   devServer: overrideDevServer(
     // dev server plugin
-    watchAll()
-  )
+    watchAll(),
+  ),
 };
