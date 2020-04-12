@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {"source.fixAll.eslint": true},
+  "javascript.format.enable": false,
+  "codemetrics.basics.CodeLensEnabled": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+  ]
+}

@@ -1,28 +1,23 @@
 /** @jsx jsx */
-import { useEffect } from 'react';
-import { jsx, css } from '@emotion/core';
-import styled from '@emotion/styled';
-import { mobile } from '../../styles/MediaQuery';
+import { useEffect } from 'react'
+import { jsx, css } from '@emotion/core'
+import styled from '@emotion/styled'
+import { mobile } from '../../styles/MediaQuery'
 
 interface Props {
   children: any;
 }
 
-export default function(props: Props) {
-
+export default function (props: Props) {
   useEffect(() => {
-    const App = document.querySelector('.App') as HTMLDivElement;
+    const App = document.querySelector('.App') as HTMLDivElement
     if (App !== null) {
-      App.style.height = '100vh';
+      App.style.height = '100vh'
     }
   }, [])
 
-  const { children } = props;
-  return (
-    <Layout>
-      {children}
-    </Layout>
-  )
+  const { children } = props
+  return <Layout>{children}</Layout>
 }
 
 const Layout = styled.div`
@@ -30,9 +25,11 @@ const Layout = styled.div`
   height: 667px;
   width: 375px;
   top: 50%;
+  padding: 32px;
   margin: 0 auto;
   border-radius: 50px;
-  box-shadow:  13px 13px 26px #c6cfc8, -13px -13px 26px #ffffff, inset 0 0 5px 2px #d6dfd8;
+  box-shadow: 13px 13px 26px #c6cfc8, -13px -13px 26px #ffffff,
+    inset 0 0 5px 2px #d6dfd8;
   transform: translateY(-50%);
   ${mobile(css`
     height: 100%;
@@ -40,4 +37,4 @@ const Layout = styled.div`
     box-shadow: none;
     border-radius: none;
   `)}
-`;
+`
