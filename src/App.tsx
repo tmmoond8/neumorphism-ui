@@ -1,12 +1,19 @@
 import React from 'react';
-import Layout from './components/base/Layout';
-import Nomalize from './styles/Nomalize';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ResetStyle from './styles/ResetStyle';
+import { IndexPage } from './pages';
 
 export default function App(): JSX.Element {
   return (
     <div className="App">
-      <Nomalize />
-      <Layout>App aa ㄹㅇㄹㅇㄴ</Layout>
+      <ResetStyle />
+      <Router>
+        <Switch>
+          <Route path="/" exact={true}>
+            <IndexPage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
